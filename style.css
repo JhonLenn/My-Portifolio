@@ -16,6 +16,13 @@ a{
 
 }
 
+p{
+    color: black;
+    text-align: left;
+    font-size: 1.5rem;
+
+}
+
 .container{
     min-height: 100vh;
     width: 100%;
@@ -126,6 +133,207 @@ a{
 /* end hero section*/
 
 
+/*Services section*/
+#services .services{
+flex-direction: column;
+text-align: center;
+max-width: 1500px;
+margin: 0 auto;
+padding: 100px 0;
+}
+
+#services .section-title{
+    font-size:  4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center ;
+}
+
+#services .service-top p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    text-align: center;
+}
+
+
+#services .services-bottom{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+}
+
+#services .service-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(img/image-card-webdesign.jpg);
+    background-size: cover;
+    margin: 10px  5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+
+#services .service-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(60deg, #31363b, #6c757d);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+
+#services .services-bottom .icon{
+    height: 50px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+#services .service-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#services .service-item p{
+    color: white;
+}
+
+.section-title{
+    font-size:  4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center ;
+}
+.section-title span{
+    color: crimson;
+}
+
+/*end Services section*/
+
+
+/*Project section*/
+
+#projects .projects{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#projects .projects-header h1{
+    margin-bottom: 10px;
+}
+
+
+#project .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+
+#projects .project-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #4e5770 50%, #4994db 100%);
+    color: white;
+
+
+}
+
+#projects .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+
+#projects .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+#projects .project-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+#projects .project-img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #4e5770 50%, #4994db 100%);
+    opacity: .7;
+
+}
+
+#projects .project-img img{
+    transition: .3s ease;
+}
+
+#projects .project-item:hover .project-img img{
+    transform: scale(1.1);
+}
+
+#projects .project-item img{
+    width: 100%;
+}
+
+
+
+#projects .project-info p{
+    color: white;
+}
+/*end Project section*/
 /*keyframe*/
 
 @keyframes text_reveal_box{
