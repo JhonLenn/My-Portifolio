@@ -229,7 +229,7 @@ padding: 100px 0;
     letter-spacing: .2rem;
     text-align: center ;
 }
-.section-title span{
+span{
     color: crimson;
 }
 
@@ -291,11 +291,6 @@ padding: 100px 0;
 }
 
 
-#projects .project-info h2{
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-top: 10px;
-}
 
 #projects .project-img{
     flex-basis: 50%;
