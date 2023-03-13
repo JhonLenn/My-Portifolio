@@ -73,28 +73,88 @@ p{
     flex-direction: column;
 }
 
-#header .nav-list ul li{
-    color: white;
+
+#header .nav-list ul a{
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: .2rem;
-    text-decoration: none;
+    color: white;
     padding: 20px;
     display: block;
 }
 
+#header .nav-list ul a:hover{
+    color: crimson;
+}
 
 #header .nav-list ul a::after{
-    content: '';
+    content: attr(data-after);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     color: rgba(240, 248, 255, 0.021);
-    font-size: 15rem;
+    font-size: 13rem;
     letter-spacing: 50px;
     z-index: -1;
+    transition: .3s ease letter-spacing;
 }
+
+#header .nav-list ul li:hover a::after{
+    transform: translate(-50%,-50%) scale(1);
+    letter-spacing: initial;
+
+}
+
+#header .hamburguer{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+
+}
+
+
+#header .hamburguer .bar{
+    height: 2px;
+    width: 300px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+
+#header .hamburguer .bar::after,
+#header .hamburguer .bar::before{
+    content: '';
+    height: 2px;
+    width: 300px;
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    transition: .3s ease;
+    transition-property:  top,bottom;
+
+}
+
+#header .hamburguer .bar::after{
+    top: 8px;
+
+}
+
+#header .hamburguer .bar::before{
+    bottom: 8px;
+
+}
+
 /*end Header section*/
 /*hero section*/
 
