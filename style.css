@@ -63,7 +63,7 @@ p{
     background-color:rgb(31, 30, 30);
     width: 100vw;
     height: 100vh;
-    left: 0;
+    left: 100%;
     top: 0;
     display: flex;
     justify-content: center;
@@ -71,8 +71,12 @@ p{
     z-index: 1;
     overflow-x:hidden ;
     flex-direction: column;
+    transition:  .3s ease left;
 }
 
+#header .nav-list ul.active{
+    left: 0%;
+}
 
 #header .nav-list ul a{
     font-size: 2.5rem;
@@ -107,17 +111,19 @@ p{
 }
 
 #header .hamburguer{
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     display: inline-block;
     border: 3px solid white;
     border-radius: 50%;
     position: relative;
     display: flex;
+    padding: 5px;
     align-items: center;
     justify-content: center;
     z-index: 100;
     cursor: pointer;
+    transform: scale(.8);
 
 }
 
@@ -154,6 +160,17 @@ p{
     bottom: 8px;
 
 }
+
+
+#header .hamburguer.active .bar::after{
+    top:0;
+}
+
+#header .hamburguer.active .bar::before{
+    bottom: 0;
+}
+
+
 
 /*end Header section*/
 /*hero section*/
