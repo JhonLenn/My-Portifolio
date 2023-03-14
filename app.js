@@ -6,3 +6,16 @@ hamburguer.addEventListener('click', () => {
     hamburguer.classList.toggle('active');
     mobile_menu.classList.toggle('active');
 })
+
+window.onload = function() {
+    const header = document.querySelector('.header');
+  
+    document.addEventListener('scroll', () => {
+        var scroll_position = window.scrollY;
+        if (scroll_position > 800) {
+            header.style.backgroundColor = "#29333c";
+        } else {
+            header.style.backgroundColor = "transparent";
+        }
+    });
+  }
