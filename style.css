@@ -10,6 +10,7 @@ html{
     font-size: 10px;
     font-family: 'Montserrat','sans-serif';
     scroll-behavior: smooth;
+    padding: 0;
 }
 
 a{
@@ -68,7 +69,7 @@ p{
     height: 100vh;
     left: 100%;
     top: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 1;
@@ -81,7 +82,11 @@ p{
     left: 0%;
 }
 
-#header .nav-list ul a{
+#header .nav-list ul.d-flex{
+    display:flex ;
+}
+
+#header .nav-list ul li a{
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: .2rem;
@@ -90,11 +95,11 @@ p{
     display: block;
 }
 
-#header .nav-list ul a:hover{
+#header .nav-list ul li a:hover{
     color: crimson;
 }
 
-#header .nav-list ul a::after{
+#header .nav-list ul li a::after{
     content: attr(data-after);
     position: absolute;
     top: 50%;
@@ -161,8 +166,9 @@ p{
     left: 0;
     transition: .3s ease;
     transition-property:  top,bottom;
-
 }
+
+
 
 #header .hamburguer .bar::after{
     top: 8px;
@@ -212,6 +218,7 @@ p{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 50px;
+    display: flex;
     justify-content: flex-start;
 }
 
